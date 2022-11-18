@@ -1,0 +1,34 @@
+select * from postac where rodzal='wiking';
+delete from postac where id_postaci='6';
+delete from postac where id_postaci='7';
+select * from postac where rodzaj='wiking';
+# lab 4 zadanie 1
+alter table postac change id_postaci id_postaci int;
+#lub
+alter table modify id_postaci int;
+-- set foreing_key_checks=0;
+#probmlem 2 klucze obce 
+alter table walizka drop foreign key walizka_ibfk_1;
+alter table przetwory drop foreign key przetwory_ibfk_1;
+alter table przetwory drop foreign key przetwory_ibfk_2;
+alter table izba drop foreign key izba_ibfk_1;
+
+
+
+#lab 4 zdanie 2 
+alter table postac add pesel char(11) first;
+alter table postac add primary key (pesel);
+select * from postac;
+update postac set pesel='12345678908' + id_postaci;
+desc postac;
+alter table postac modify rodzaj enum('wiking','ptak','kobieta','syrena');
+insert into postac values('09876543213','6','Gertruda Nieszczera', 'syrena','1952-06-06','70');
+select nazwa from postac where nazwa regexp '[a]';
+
+
+# 3b
+
+update statek set max_ladownosc=max_ladownosc *0.7 where (data_wodowania<=2000.01.01);
+select * from postac;
+update postac set statek='Orp orzel' where nazwa like '%a%';
+
