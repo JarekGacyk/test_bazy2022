@@ -14,3 +14,10 @@ select * from kreatura where nazwa like '%or%' and udzwig between 30 and 70;
 select* from zasob;
 select * from zasob where  month(dataPozyskania) in (7,8);
 select * from zasob where rodzaj is not null order by waga asc;
+select * from kreatura order by dataUr DESC limit 5, 5;
+
+#zad 4 
+ select distinct rodzaj from zasob;
+ select concat(nazwa,  ' niesie ' ,udzwig) from kreatura where rodzaj like '%wi%';
+ select nazwa,ilosc*waga from zasob where dataPozyskania between 2000 and 2007;
+ 
