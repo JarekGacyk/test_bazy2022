@@ -1,1 +1,1 @@
-"# test_bazy2022" 
+# zadania z labow;
