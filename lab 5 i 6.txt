@@ -1,0 +1,16 @@
+zad5
+a) select waga*0.7 as 'masa wlasciwa' from zasob  where rodzaj='jedzenie' ;
+select waga*0.3 as 'odpadki' from zasob  where rodzaj='jedzenie' ;
+b)select * from zasob where rodzaj IS NULL;
+c)select distinct * from zasob where nazwa Like 'Ba%' or '%os' order by nazwa ;
+ 
+lab 6
+zad1
+a)select AVG(waga) from kreatura where rodzaj='wiking';
+b)select AVG(waga) , count(idKreatury) , rodzaj from kreatura group by rodzaj;
+c)select AVG(YEAR(CURDATE())-YEAR(dataUr) ,rodzaj AS 'sredni wiek' from kreatura group by rodzaj;
+
+zad 2
+a)select SUM(waga),rodzaj from zasob group by rodzaj;
+b)SELECT nazwa,AVG(waga) FROM zasob WHERE ilosc>=4 GROUP BY nazwa HAVING sum(waga)>10;
+c)select  nazwa  from zasob GROUP BY rodzaj HAVING MIN(ilosc)>1;
