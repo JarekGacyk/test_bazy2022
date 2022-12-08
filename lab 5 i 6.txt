@@ -8,7 +8,7 @@ lab 6
 zad1
 a)select AVG(waga) from kreatura where rodzaj='wiking';
 b)select AVG(waga) , count(idKreatury) , rodzaj from kreatura group by rodzaj;
-c)select AVG(YEAR(CURDATE())-YEAR(dataUr) ,rodzaj AS 'sredni wiek' from kreatura group by rodzaj;
+cSELECT rodzaj,AVG(YEAR(CURDATE())-YEAR(dataUr)) AS sredni_wiek FROM kreatura GROUP BY rodzaj;
 
 zad 2
 a)select SUM(waga),rodzaj from zasob group by rodzaj;
