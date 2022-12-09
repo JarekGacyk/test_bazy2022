@@ -14,3 +14,13 @@ zad 2
 a)select SUM(waga),rodzaj from zasob group by rodzaj;
 b)SELECT nazwa,AVG(waga) FROM zasob WHERE ilosc>=4 GROUP BY nazwa HAVING sum(waga)>10;
 c)select  nazwa  from zasob GROUP BY rodzaj HAVING MIN(ilosc)>1;
+
+zad 3 
+
+a)
+select * from kreatura k inner join ekwipunek e on  k.idKreatury=e.idKreatury ;
+b)
+select * from kreatura k inner join ekwipunek e on  k.idKreatury=e.idKreatury 
+  inner join zasob  z on  e.idZasobu=z.idZasobu;
+c)
+select k.nazwa, e.idKreatury from kreatura k  left join ekwipunek e on k.idKreatury=e.idKreatury where e.idKreatury is null;
